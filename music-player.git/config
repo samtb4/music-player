@@ -1,0 +1,11 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = true
+	ignorecase = true
+	precomposeunicode = true
+[lfs]
+	repositoryformatversion = 0
+[remote "origin"]
+	url = https://github.com/samtb4/music-player.git
+	fetch = +refs/heads/*:refs/remotes/origin/*

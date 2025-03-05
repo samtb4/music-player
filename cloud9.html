@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud9</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Knewave&display=swap" rel="stylesheet"> <!-- Font from google -->
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+
+    <div class="background-container" id="background-container"></div>
+    
+    <div class="popup-player">
+
+
+        <h2 id="song-title">Now Playing: Song</h2>
+        
+        <img id="song-image-img" src="images/vegeta.png" alt="Song Image">
+
+        <audio id="audio-player">
+            <source id="audio-source" src="songs/rain.mp3" type="audio/mpeg">
+            Your browser does not support the audio tag.
+        </audio>
+
+        
+        <input type="range" id="progress-bar" value="0" min="0" max="100">
+        <span id="value-display">0s</span>
+
+
+    </div>
+    
+    <img src="images/sleepingCat.gif" alt="A fun animation" class="gif-style">
+
+    <!-- Controls section -->
+    <div class="controls">
+        <button id="skip-backward">
+            <img src="images/Back.png" alt="Skip Backward" />
+        </button>
+        <button id="play-pause"></button>
+        <button id="skip-forward">
+            <img src="images/Skip.png" alt="Skip Forward" />
+        </button>
+    </div>
+    <span id = "brand" >Cloud9</span>
+    
+
+    <script src="player.js"></script> <!-- JS file link -->
+
+</body>
+</html>

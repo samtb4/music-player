@@ -1,0 +1,183 @@
+html, body {
+    height: 100%; 
+    margin: 0;    
+}
+
+/* Font Styling */
+.knewave-regular {
+    font-family: "Knewave", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background: linear-gradient(to bottom, #54CEDC, #89e4f7);
+    font-family: "Knewave", serif;
+    text-align: center;
+    
+}
+
+.popup-player {
+    width: 280px;
+    background: rgba(245, 245, 245, 0.7);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+
+#song-image-img {
+    width: 150px; /* Full width inside the player */
+    height: 150px; /* Maintain aspect ratio */
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+/* Play/Pause Button Styles */
+button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 50px;      
+    height: 50px;     
+    background-size: cover;
+    
+}
+
+
+#play-pause {
+    background-image: url('images/Pause.png'); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* To change to the play icon (using background image to switch between pause and play) */
+#play-pause.playing {
+    background-image: url('images/Play.png'); 
+}
+
+/* Progress bar */
+#progress-bar {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 8px; 
+    background: linear-gradient(to right, #54CEDC 0%, #54CEDC 0%, #ddd 0%, #ddd 100%);
+    border-radius: 4px;
+    outline: none;
+    transition: background 0.1s;
+    overflow: visible;
+}
+
+/* Track (background of progress bar) */
+#progress-bar::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8px;
+    border-radius: 4px;
+}
+
+/* Thumb (draggable circle) */
+#progress-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px; 
+    height: 25px; 
+    background: url('images/cloudIcon.png') no-repeat center; /* Image icon for the thumb */
+    background-size: contain; 
+    cursor: pointer;
+    margin-top: -8px; /* To align with track */
+    border: none;
+    position: relative;
+    z-index: 2;
+}
+
+
+/* Control box */
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(245, 245, 245, 0.7);;  
+    padding: 15px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+    width: 75%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Size of clickable buttons */
+#skip-backward, #skip-forward, #play-pause {
+    width: 50px; 
+    height: 50px; 
+}
+
+#skip-backward img, #skip-forward img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+}
+
+
+
+/* GIF positioning*/
+.gif-style {
+    display: block;
+    position: absolute; 
+    width: 50px;
+    height: 50px;
+    top: 78%;  
+    left: 80%; 
+    transform: translate(-50%, -50%); 
+}
+
+/* Logo Styling */
+#brand {
+    font-size: 20px; 
+    font-weight: bold; 
+    color: #54CEDC; /* Text color */
+    text-transform: uppercase; 
+    
+    /* Text border (outline effect), black border effect*/
+    text-shadow: 
+        -2px -2px 0 #000,  
+         2px -2px 0 #000,
+        -2px  2px 0 #000,
+         2px  2px 0 #000; 
+
+    /* Positioning */
+    position: absolute;
+    top: 425px;  
+    left: 95px;  
+    transform: translateX(-50%); 
+}
+
+.background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1; /* To keep it behind other elements */
+}
+
+/* For the background clouds used in JS file */
+.background-image {
+    position: absolute;
+    width: 50px; 
+    height: 50px;
+    opacity: 0.5; 
+}
